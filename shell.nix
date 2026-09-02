@@ -6,6 +6,7 @@ pkgs.mkShell {
       setuptools
       build
       rembg
+      "rembg[gpu]"
       pillow
     ]))
   ];
