@@ -9,11 +9,12 @@ def extract_frames(gif_path):
     frames = []
 
     for frame in ImageSequence.Iterator(img):
-        frames.append(remove(frame))
+        frame_rgba = frame.convert("RGBA")
+        frames.append(remove(frame_rgba))
 
     return frames
 
 
 if __name__ == "__main__":
     frames = extract_frames(sys.argv[1])
-    print(f"Extracted {len(frames)} frames!")
+    print(f"Extracted {len(frames)} frames")
