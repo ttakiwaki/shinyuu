@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+src/__init__.py
+src/__main__.py
+src/core/extract.py
+src/shinyuu.egg-info/PKG-INFO
+src/shinyuu.egg-info/SOURCES.txt
+src/shinyuu.egg-info/dependency_links.txt
+src/shinyuu.egg-info/requires.txt
+src/shinyuu.egg-info/top_level.txt
