@@ -18,7 +18,7 @@ def extract_frames(gif_path):
     img = Image.open(gif_path)
     frames = []
 
-    session = new_session("u2net")
+    session = new_session("u2net")  # isnet-anime
 
     for frame in ImageSequence.Iterator(img):
         frame_rgba = frame.convert("RGBA")
