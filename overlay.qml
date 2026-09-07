@@ -1,5 +1,4 @@
 // qmllint disable uncreatable-type
-
 import Quickshell
 import Quickshell.Wayland
 import Quickshell.Io
@@ -17,15 +16,22 @@ ShellRoot {
         WlrLayershell.layer: WlrLayer.Overlay
         WlrLayershell.exclusionMode: ExclusionMode.Ignore
         mask: Region {}
-
         implicitWidth: anim.implicitWidth * anim.scale
         implicitHeight: anim.implicitHeight * anim.scale
 
         AnimatedImage {
             id: anim
-            source: "preview.gif"
-            scale: 0.5
             anchors.centerIn: parent
+        }
+
+        FileView {
+            id: stateFile
+            path: "/home/taki/.config/shinyuu/state.json"
+            onLoaded: {
+                const cfg = JSON.parse(text())
+                anim.source = "file://" + cfg.gif
+                anim.scale = cfg.scale
+            }
         }
     }
 }

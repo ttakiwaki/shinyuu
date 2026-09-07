@@ -6,3 +6,4 @@ Description-Content-Type: text/markdown
 Requires-Dist: rembg
 Requires-Dist: pillow
 Requires-Dist: onnxruntime-gpu
+Requires-Dist: pathlib
